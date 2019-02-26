@@ -210,8 +210,6 @@ with warnings.catch_warnings():
         minmax = preprocessing.MinMaxScaler()
         #create heat array for plotting
         heat = np.array([])
-        #extract SOM's codebook, best done here so evertthing can be accessed properly
-        #cbook = SOM.codebook
         #for node in code book:
         for node in cbook.matrix:
             #get summed activity for data
@@ -324,6 +322,7 @@ with warnings.catch_warnings():
         #classification report
         creport = classification_report(lab_test,lab_pred)
         print "CLASSIFICATION REPORT: "  
+        
         print creport
         
         #hamming distance
